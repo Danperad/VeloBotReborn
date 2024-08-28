@@ -1,0 +1,26 @@
+version: '3'
+
+services:
+  postgres:
+    image: postgres:16-alpine
+    restart: unless-stopped
+    volumes:
+      - ./data:/var/lib/postgresql/data
+      - ./init.sql:/docker-entrypoint-initdb.d/create_tables.sql
+    environment:
+      POSTGRES_DB: velo
+      POSTGRES_PASSWORD: tesTpasswOrd!
+    ports:
+      - "5433:5432"
+  app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    restart: unless-stopped
+    links:
+      - postgres
+    depends_on:
+      - postgres
+    environment:
+      TELEGRAM_API_KEY: aaa
+      DATABASE_URL: postgres://postgres:tesTpasswOrd!@postgres:5432/velo?pool_max_conns=10
