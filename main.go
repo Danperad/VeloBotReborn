@@ -1,9 +1,9 @@
 package main
 
 import (
+	"VeloBotReborn/controllers"
+	"VeloBotReborn/utils"
 	"fmt"
-	"github.com/Danperad/tgBotVeloBot/controllers"
-	"github.com/Danperad/tgBotVeloBot/utils"
 	"github.com/PaulSonOfLars/gotgbot/v2"
 	"github.com/PaulSonOfLars/gotgbot/v2/ext"
 	"github.com/PaulSonOfLars/gotgbot/v2/ext/handlers"

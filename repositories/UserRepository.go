@@ -1,8 +1,8 @@
 package repositories
 
 import (
+	"VeloBotReborn/dbModels"
 	"context"
-	"github.com/Danperad/tgBotVeloBot/dbModels"
 	"github.com/jackc/pgx/v5/pgxpool"
 	"os"
 )

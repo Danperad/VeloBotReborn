@@ -1,10 +1,10 @@
 package controllers
 
 import (
+	"VeloBotReborn/dbModels"
+	"VeloBotReborn/repositories"
+	"VeloBotReborn/utils"
 	"fmt"
-	"github.com/Danperad/tgBotVeloBot/dbModels"
-	"github.com/Danperad/tgBotVeloBot/repositories"
-	"github.com/Danperad/tgBotVeloBot/utils"
 	"github.com/PaulSonOfLars/gotgbot/v2"
 	"sort"
 	"strconv"

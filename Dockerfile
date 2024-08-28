@@ -2,12 +2,16 @@ FROM golang:1.23-alpine AS build-stage
 
 WORKDIR /app
 
+COPY *.go ./
+COPY controllers ./controllers
+COPY dbModels ./dbModels
+COPY repositories ./repositories
+COPY utils ./utils
+
 COPY go.mod go.sum ./
 RUN go mod download
 
-COPY **.go ./
-
-RUN go build -o /velo-bot
+RUN CGO_ENABLED=0 GOOS=linux go build -o /velo-bot
 
 FROM alpine:latest
 
