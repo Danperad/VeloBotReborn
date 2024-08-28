@@ -2,7 +2,7 @@ package repositories
 
 import (
 	"context"
-	"github.com/danperad/tgBotVeloBot/dbModels"
+	"github.com/Danperad/tgBotVeloBot/dbModels"
 	"github.com/jackc/pgx/v5/pgxpool"
 	"os"
 )

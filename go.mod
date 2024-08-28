@@ -1,4 +1,4 @@
-module github.com/danperad/tgBotVeloBot
+module github.com/Danperad/tgBotVeloBot
 
 go 1.23
 

@@ -2,10 +2,10 @@ package controllers
 
 import (
 	"fmt"
+	"github.com/Danperad/tgBotVeloBot/dbModels"
+	"github.com/Danperad/tgBotVeloBot/repositories"
+	"github.com/Danperad/tgBotVeloBot/utils"
 	"github.com/PaulSonOfLars/gotgbot/v2"
-	"github.com/danperad/tgBotVeloBot/dbModels"
-	"github.com/danperad/tgBotVeloBot/repositories"
-	"github.com/danperad/tgBotVeloBot/utils"
 	"sort"
 	"strconv"
 )
